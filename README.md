@@ -20,14 +20,14 @@ React makes it easy to build components.
 
 But as applications grow, questions become more important than syntax:
 
-* How should components communicate?
-* How should state be shared?
-* How should a component API be designed?
-* When should composition be preferred over configuration?
-* When is Context appropriate?
-* When does abstraction become unnecessary complexity?
-* What are the trade-offs of one pattern compared to another?
-* When should a pattern **not** be used?
+- How should components communicate?
+- How should state be shared?
+- How should a component API be designed?
+- When should composition be preferred over configuration?
+- When is Context appropriate?
+- When does abstraction become unnecessary complexity?
+- What are the trade-offs of one pattern compared to another?
+- When should a pattern **not** be used?
 
 This repository explores those questions through small, focused, executable examples.
 
@@ -89,26 +89,26 @@ A mature understanding of a pattern includes knowing when it introduces more com
 
 ## Composition
 
-* 🚧 Compound Components
-* ⬜ Render Props
-* ⬜ Higher-Order Components
+- 🚧 Compound Components
+- ⬜ Render Props
+- ⬜ Higher-Order Components
 
 ## Component API Design
 
-* ⬜ Controlled Components
-* ⬜ Uncontrolled Components
-* ⬜ Headless Components
+- ⬜ Controlled Components
+- ⬜ Uncontrolled Components
+- ⬜ Headless Components
 
 ## State & Logic
 
-* ⬜ Provider Pattern
-* ⬜ State Reducer Pattern
-* ⬜ Custom Hooks
+- ⬜ Provider Pattern
+- ⬜ State Reducer Pattern
+- ⬜ Custom Hooks
 
 ## Architecture
 
-* ⬜ Container / Presentational
-* ⬜ Feature-oriented Component Architecture
+- ⬜ Container / Presentational
+- ⬜ Feature-oriented Component Architecture
 
 > The pattern list is intentionally evolving. New patterns will be added when they provide meaningful engineering insight.
 
@@ -158,14 +158,14 @@ What additional concerns appear in a realistic application?
 
 Examples may include:
 
-* TypeScript
-* Accessibility
-* State management
-* Error handling
-* API design
-* Testing
-* Performance
-* Developer experience
+- TypeScript
+- Accessibility
+- State management
+- Error handling
+- API design
+- Testing
+- Performance
+- Developer experience
 
 ## 7. API Design
 
@@ -234,22 +234,14 @@ A simplified API might eventually look like:
 ```tsx
 <Tabs defaultValue="overview">
   <Tabs.List>
-    <Tabs.Trigger value="overview">
-      Overview
-    </Tabs.Trigger>
+    <Tabs.Trigger value="overview">Overview</Tabs.Trigger>
 
-    <Tabs.Trigger value="settings">
-      Settings
-    </Tabs.Trigger>
+    <Tabs.Trigger value="settings">Settings</Tabs.Trigger>
   </Tabs.List>
 
-  <Tabs.Panel value="overview">
-    Overview content
-  </Tabs.Panel>
+  <Tabs.Panel value="overview">Overview content</Tabs.Panel>
 
-  <Tabs.Panel value="settings">
-    Settings content
-  </Tabs.Panel>
+  <Tabs.Panel value="settings">Settings content</Tabs.Panel>
 </Tabs>
 ```
 
@@ -257,13 +249,13 @@ The goal is not simply to build `Tabs`.
 
 The goal is to understand:
 
-* why this API is useful
-* how the components communicate
-* how shared state is managed
-* how Context fits into the design
-* how controlled and uncontrolled APIs differ
-* what trade-offs the abstraction introduces
-* when this approach is appropriate
+- why this API is useful
+- how the components communicate
+- how shared state is managed
+- how Context fits into the design
+- how controlled and uncontrolled APIs differ
+- what trade-offs the abstraction introduces
+- when this approach is appropriate
 
 ---
 
@@ -305,11 +297,11 @@ The structure may evolve as the repository grows.
 
 This is not intended to be:
 
-* a React tutorial
-* a collection of copy-paste snippets
-* a list of "best practices"
-* a framework comparison
-* a production-ready component library
+- a React tutorial
+- a collection of copy-paste snippets
+- a list of "best practices"
+- a framework comparison
+- a production-ready component library
 
 The implementations are intentionally focused on **learning, experimentation, and engineering reasoning**.
 
@@ -339,18 +331,18 @@ Knowing the implementation without understanding the problem is not enough.
 
 This repository aims to build a deeper understanding of:
 
-* React composition
-* Component API design
-* State ownership
-* State sharing
-* Context
-* Reusability
-* Abstraction
-* TypeScript API design
-* Accessibility
-* Testing
-* Performance considerations
-* Architectural trade-offs
+- React composition
+- Component API design
+- State ownership
+- State sharing
+- Context
+- Reusability
+- Abstraction
+- TypeScript API design
+- Accessibility
+- Testing
+- Performance considerations
+- Architectural trade-offs
 
 Ultimately, the goal is to develop **pattern recognition and architectural intuition**, rather than memorizing patterns.
 
