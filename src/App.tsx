@@ -1,10 +1,7 @@
+import { BaselineExample } from '../patterns/compound-components/examples/baseline/App'
+
 function App() {
-  return (
-    <main>
-      <h1>React Engineering Patterns</h1>
-      <p>Explore React patterns from first principles.</p>
-    </main>
-  )
+  return <BaselineExample />
 }
 
 export default App
