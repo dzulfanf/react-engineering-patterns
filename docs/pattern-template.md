@@ -14,9 +14,9 @@
 
 ### Constraints
 
-* [Constraint 1]
-* [Constraint 2]
-* [Constraint 3]
+- [Constraint 1]
+- [Constraint 2]
+- [Constraint 3]
 
 ---
 
@@ -36,14 +36,14 @@
 
 ### What Works
 
-* [Advantage]
-* [Advantage]
+- [Advantage]
+- [Advantage]
 
 ### What Starts to Hurt
 
-* [Problem]
-* [Problem]
-* [Problem]
+- [Problem]
+- [Problem]
+- [Problem]
 
 ---
 
@@ -53,15 +53,15 @@
 
 Consider:
 
-* Increasing component complexity
-* Increasing number of props
-* State ownership
-* Component communication
-* Reusability
-* API complexity
-* Testing complexity
-* Accessibility
-* Performance
+- Increasing component complexity
+- Increasing number of props
+- State ownership
+- Component communication
+- Reusability
+- API complexity
+- Testing complexity
+- Accessibility
+- Performance
 
 The important question is:
 
@@ -141,14 +141,14 @@ Pattern
 
 Potential considerations:
 
-* Error handling
-* API design
-* Accessibility
-* State management
-* Extensibility
-* Developer experience
-* Testing
-* Performance
+- Error handling
+- API design
+- Accessibility
+- State management
+- Extensibility
+- Developer experience
+- Testing
+- Performance
 
 ---
 
@@ -180,15 +180,15 @@ Potential considerations:
 
 ### Advantages
 
-* [Advantage]
-* [Advantage]
-* [Advantage]
+- [Advantage]
+- [Advantage]
+- [Advantage]
 
 ### Disadvantages
 
-* [Disadvantage]
-* [Disadvantage]
-* [Disadvantage]
+- [Disadvantage]
+- [Disadvantage]
+- [Disadvantage]
 
 ### Complexity
 
@@ -200,9 +200,9 @@ Potential considerations:
 
 Use this pattern when:
 
-* [Situation]
-* [Situation]
-* [Situation]
+- [Situation]
+- [Situation]
+- [Situation]
 
 ---
 
@@ -210,9 +210,9 @@ Use this pattern when:
 
 Avoid this pattern when:
 
-* [Situation]
-* [Situation]
-* [Situation]
+- [Situation]
+- [Situation]
+- [Situation]
 
 > A pattern is not automatically a best practice simply because it is reusable or flexible.
 
@@ -236,10 +236,10 @@ Avoid this pattern when:
 
 ### What Should Be Tested?
 
-* [Behavior]
-* [Behavior]
-* [Contract]
-* [Edge case]
+- [Behavior]
+- [Behavior]
+- [Contract]
+- [Edge case]
 
 ### Testing Strategy
 
@@ -263,12 +263,12 @@ Avoid this pattern when:
 
 Consider:
 
-* Semantic HTML
-* Keyboard interaction
-* Focus management
-* ARIA
-* Screen readers
-* Accessible state
+- Semantic HTML
+- Keyboard interaction
+- Focus management
+- ARIA
+- Screen readers
+- Accessible state
 
 ### Accessibility Testing
 
@@ -282,13 +282,13 @@ Consider:
 
 Consider:
 
-* Rendering behavior
-* Re-renders
-* State subscriptions
-* Context propagation
-* Memoization
-* Component boundaries
-* Bundle impact
+- Rendering behavior
+- Re-renders
+- State subscriptions
+- Context propagation
+- Memoization
+- Component boundaries
+- Bundle impact
 
 ### Performance Trade-offs
 
@@ -344,25 +344,25 @@ For decisions that have significant architectural impact, create a separate ADR.
 
 ## 18. References
 
-* [Reference]
-* [Reference]
-* [Reference]
+- [Reference]
+- [Reference]
+- [Reference]
 
 ---
 
 ## Status
 
-* [ ] Problem defined
-* [ ] Baseline implemented
-* [ ] Evolution documented
-* [ ] Pattern implemented
-* [ ] TypeScript considerations documented
-* [ ] API design documented
-* [ ] Trade-offs documented
-* [ ] Alternatives compared
-* [ ] Tests implemented
-* [ ] Accessibility reviewed
-* [ ] Performance reviewed
-* [ ] Failure modes documented
-* [ ] Final review completed
-* [ ] Deep dive complete
+- [ ] Problem defined
+- [ ] Baseline implemented
+- [ ] Evolution documented
+- [ ] Pattern implemented
+- [ ] TypeScript considerations documented
+- [ ] API design documented
+- [ ] Trade-offs documented
+- [ ] Alternatives compared
+- [ ] Tests implemented
+- [ ] Accessibility reviewed
+- [ ] Performance reviewed
+- [ ] Failure modes documented
+- [ ] Final review completed
+- [ ] Deep dive complete

@@ -16,11 +16,11 @@ It should not be intentionally designed poorly just to justify a more advanced p
 
 We need a reusable Tabs component that can:
 
-* Display a list of tabs.
-* Maintain one active tab.
-* Allow users to switch between tabs.
-* Display content for the active tab.
-* Support disabled tabs.
+- Display a list of tabs.
+- Maintain one active tab.
+- Allow users to switch between tabs.
+- Display content for the active tab.
+- Support disabled tabs.
 
 The component should provide a simple configuration-based API.
 
@@ -32,14 +32,14 @@ The component should provide a simple configuration-based API.
 
 The baseline implementation must support:
 
-* A list of tabs.
-* One active tab at a time.
-* Internal state management.
-* Switching between enabled tabs.
-* Disabled tabs.
-* Tab content using `ReactNode`.
-* TypeScript.
-* Unit and component tests.
+- A list of tabs.
+- One active tab at a time.
+- Internal state management.
+- Switching between enabled tabs.
+- Disabled tabs.
+- Tab content using `ReactNode`.
+- TypeScript.
+- Unit and component tests.
 
 ---
 
@@ -47,18 +47,18 @@ The baseline implementation must support:
 
 The baseline implementation will not include:
 
-* Compound Components.
-* React Context.
-* Controlled state.
-* `value` / `onValueChange` APIs.
-* Keyboard navigation.
-* Complete ARIA implementation.
-* Focus management.
-* Advanced composition.
-* Custom trigger rendering.
-* Custom panel rendering.
-* Performance optimization.
-* Advanced extensibility.
+- Compound Components.
+- React Context.
+- Controlled state.
+- `value` / `onValueChange` APIs.
+- Keyboard navigation.
+- Complete ARIA implementation.
+- Focus management.
+- Advanced composition.
+- Custom trigger rendering.
+- Custom panel rendering.
+- Performance optimization.
+- Advanced extensibility.
 
 These features are intentionally excluded because they are not required to solve the baseline problem.
 
@@ -142,10 +142,7 @@ When the component renders:
 If `defaultActiveTab` is provided and matches an enabled tab:
 
 ```tsx
-<Tabs
-  defaultActiveTab="settings"
-  tabs={tabs}
-/>
+<Tabs defaultActiveTab="settings" tabs={tabs} />
 ```
 
 That tab should be active initially.
@@ -166,9 +163,9 @@ When a user selects an enabled tab:
 
 A disabled tab:
 
-* Should be visually distinguishable.
-* Should not become active through pointer interaction.
-* Should not change the currently active panel.
+- Should be visually distinguishable.
+- Should not become active through pointer interaction.
+- Should not change the currently active panel.
 
 ---
 
@@ -189,9 +186,9 @@ type Tab = {
 
 `id` identifies the tab and connects:
 
-* Trigger state
-* Active state
-* Panel content
+- Trigger state
+- Active state
+- Panel content
 
 For the baseline implementation, uniqueness is assumed.
 
@@ -223,12 +220,12 @@ The baseline implementation should test observable behavior.
 
 ### Required Tests
 
-* Renders all tab labels.
-* Displays the initial active panel.
-* Uses `defaultActiveTab` when valid.
-* Falls back to the first enabled tab when appropriate.
-* Changes the active panel when an enabled tab is selected.
-* Does not activate disabled tabs.
+- Renders all tab labels.
+- Displays the initial active panel.
+- Uses `defaultActiveTab` when valid.
+- Falls back to the first enabled tab when appropriate.
+- Changes the active panel when an enabled tab is selected.
+- Does not activate disabled tabs.
 
 ### Testing Principle
 
@@ -236,9 +233,9 @@ Tests should interact with the component through its public behavior.
 
 Avoid testing:
 
-* Internal state variables.
-* Implementation-specific function calls.
-* Internal component structure.
+- Internal state variables.
+- Implementation-specific function calls.
+- Internal component structure.
 
 The goal is to verify:
 
@@ -266,18 +263,18 @@ Full accessibility requirements, including keyboard navigation and ARIA relation
 
 The baseline is complete when:
 
-* [ ] Tabs render correctly.
-* [ ] One tab is active.
-* [ ] The correct panel is displayed.
-* [ ] Users can switch enabled tabs.
-* [ ] Disabled tabs cannot be activated.
-* [ ] `defaultActiveTab` works.
-* [ ] Fallback behavior works.
-* [ ] TypeScript types are defined.
-* [ ] Tests pass.
-* [ ] Lint passes.
-* [ ] Type checking passes.
-* [ ] Build passes.
+- [ ] Tabs render correctly.
+- [ ] One tab is active.
+- [ ] The correct panel is displayed.
+- [ ] Users can switch enabled tabs.
+- [ ] Disabled tabs cannot be activated.
+- [ ] `defaultActiveTab` works.
+- [ ] Fallback behavior works.
+- [ ] TypeScript types are defined.
+- [ ] Tests pass.
+- [ ] Lint passes.
+- [ ] Type checking passes.
+- [ ] Build passes.
 
 ---
 

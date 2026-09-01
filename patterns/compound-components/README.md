@@ -25,15 +25,15 @@ This approach works well while the component is simple.
 
 However, as requirements grow, the component may need to support:
 
-* Custom tab layouts
-* Custom triggers
-* Custom panels
-* Additional actions
-* Icons
-* Loading states
-* Disabled states
-* Different visual structures
-* Shared state between related components
+- Custom tab layouts
+- Custom triggers
+- Custom panels
+- Additional actions
+- Icons
+- Loading states
+- Disabled states
+- Different visual structures
+- Shared state between related components
 
 The API can gradually become configuration-heavy.
 
@@ -45,14 +45,14 @@ How can we design a component API that allows consumers to **compose the structu
 
 The solution should:
 
-* Preserve a clear and readable component API.
-* Allow consumers to control component composition.
-* Keep related components coordinated.
-* Avoid excessive configuration props.
-* Maintain type safety.
-* Support both reusable logic and flexible presentation.
-* Remain testable.
-* Allow the abstraction to evolve without unnecessary complexity.
+- Preserve a clear and readable component API.
+- Allow consumers to control component composition.
+- Keep related components coordinated.
+- Avoid excessive configuration props.
+- Maintain type safety.
+- Support both reusable logic and flexible presentation.
+- Remain testable.
+- Allow the abstraction to evolve without unnecessary complexity.
 
 ---
 
@@ -85,20 +85,20 @@ A simplified example:
 
 The component owns the relationship between:
 
-* Tabs
-* Tab triggers
-* Tab panels
-* Active state
+- Tabs
+- Tab triggers
+- Tab panels
+- Active state
 
 ### What Works
 
 The baseline approach has several advantages:
 
-* Simple to understand.
-* Small public API.
-* Easy to implement initially.
-* Easy to render from configuration.
-* Straightforward to test.
+- Simple to understand.
+- Small public API.
+- Easy to implement initially.
+- Easy to render from configuration.
+- Straightforward to test.
 
 For simple use cases, this may be the better solution.
 
@@ -149,10 +149,10 @@ The consumer can configure the component, but has limited control over its inter
 
 This creates tension between:
 
-* Reusability
-* Flexibility
-* API simplicity
-* Component ownership
+- Reusability
+- Flexibility
+- API simplicity
+- Component ownership
 
 The key question becomes:
 
@@ -296,13 +296,13 @@ Evaluate the pattern beyond the basic implementation.
 
 Areas include:
 
-* Accessibility
-* TypeScript
-* Testing
-* Performance
-* API design
-* Error handling
-* Developer experience
+- Accessibility
+- TypeScript
+- Testing
+- Performance
+- API design
+- Error handling
+- Developer experience
 
 ---
 
@@ -310,19 +310,19 @@ Areas include:
 
 ### Minimal Implementation
 
-*To be implemented.*
+_To be implemented._
 
 The minimal implementation should demonstrate the core Compound Components mechanism without introducing unnecessary abstractions.
 
 ### TypeScript Implementation
 
-*To be implemented.*
+_To be implemented._
 
 The implementation should explore how TypeScript can model the public component API and shared component contracts.
 
 ### Production-Oriented Implementation
 
-*To be implemented.*
+_To be implemented._
 
 Production considerations will be added after the core pattern has been established.
 
@@ -337,22 +337,14 @@ The intended API will evolve toward a compositional interface similar to:
 ```tsx
 <Tabs defaultValue="overview">
   <Tabs.List>
-    <Tabs.Trigger value="overview">
-      Overview
-    </Tabs.Trigger>
+    <Tabs.Trigger value="overview">Overview</Tabs.Trigger>
 
-    <Tabs.Trigger value="settings">
-      Settings
-    </Tabs.Trigger>
+    <Tabs.Trigger value="settings">Settings</Tabs.Trigger>
   </Tabs.List>
 
-  <Tabs.Panel value="overview">
-    Overview content
-  </Tabs.Panel>
+  <Tabs.Panel value="overview">Overview content</Tabs.Panel>
 
-  <Tabs.Panel value="settings">
-    Settings content
-  </Tabs.Panel>
+  <Tabs.Panel value="settings">Settings content</Tabs.Panel>
 </Tabs>
 ```
 
@@ -362,27 +354,23 @@ This API is intentionally presented as a target for exploration rather than the 
 
 The API should allow consumers to control:
 
-* Component structure
-* Content
-* Presentation
-* Composition
+- Component structure
+- Content
+- Presentation
+- Composition
 
 while the component system controls:
 
-* Shared state
-* Coordination
-* Behavioral contracts
+- Shared state
+- Coordination
+- Behavioral contracts
 
 ### Alternative API
 
 The configuration-based alternative remains valid:
 
 ```tsx
-<Tabs
-  tabs={tabs}
-  activeTab={activeTab}
-  onTabChange={onTabChange}
-/>
+<Tabs tabs={tabs} activeTab={activeTab} onTabChange={onTabChange} />
 ```
 
 ### Comparison
@@ -397,22 +385,22 @@ The deep dive will compare configuration and composition rather than assuming th
 
 Potential benefits include:
 
-* Flexible composition
-* More expressive APIs
-* Separation of structure and behavior
-* Better control over component layout
-* Related components can share behavior
+- Flexible composition
+- More expressive APIs
+- Separation of structure and behavior
+- Better control over component layout
+- Related components can share behavior
 
 ### Disadvantages
 
 Potential costs include:
 
-* More components
-* More conceptual complexity
-* Implicit relationships between components
-* Context-related complexity
-* More complex TypeScript types
-* Potential misuse of the abstraction
+- More components
+- More conceptual complexity
+- Implicit relationships between components
+- Context-related complexity
+- More complex TypeScript types
+- Potential misuse of the abstraction
 
 ### Complexity
 
@@ -426,11 +414,11 @@ The goal of this deep dive is to determine **when that trade-off is worthwhile**
 
 The pattern may be appropriate when:
 
-* Several components form a cohesive conceptual unit.
-* Consumers need meaningful control over structure.
-* Related components need to share state or behavior.
-* A configuration-based API is becoming difficult to extend.
-* The component needs multiple valid compositions.
+- Several components form a cohesive conceptual unit.
+- Consumers need meaningful control over structure.
+- Related components need to share state or behavior.
+- A configuration-based API is becoming difficult to extend.
+- The component needs multiple valid compositions.
 
 ---
 
@@ -438,11 +426,11 @@ The pattern may be appropriate when:
 
 Avoid introducing Compound Components when:
 
-* The component has a simple API.
-* There is little need for structural customization.
-* A few props solve the problem cleanly.
-* The abstraction introduces more complexity than value.
-* The relationship between child components is not meaningful.
+- The component has a simple API.
+- There is little need for structural customization.
+- A few props solve the problem cleanly.
+- The abstraction introduces more complexity than value.
+- The relationship between child components is not meaningful.
 
 > Composition is not automatically better than configuration.
 
@@ -469,12 +457,12 @@ The final decision should be based on the specific problem being solved rather t
 
 The implementation should verify:
 
-* Components render correctly.
-* Related components coordinate correctly.
-* State changes produce the expected behavior.
-* Invalid usage is handled appropriately.
-* Controlled and uncontrolled behavior work as intended.
-* Public component contracts remain stable.
+- Components render correctly.
+- Related components coordinate correctly.
+- State changes produce the expected behavior.
+- Invalid usage is handled appropriately.
+- Controlled and uncontrolled behavior work as intended.
+- Public component contracts remain stable.
 
 ### Testing Strategy
 
@@ -482,15 +470,15 @@ Tests should focus primarily on **observable behavior** rather than implementati
 
 ### Example
 
-*To be implemented.*
+_To be implemented._
 
 ### Testing Considerations
 
 Avoid tests that depend unnecessarily on internal implementation details such as:
 
-* Specific Context implementation
-* Internal state variables
-* Private component structure
+- Specific Context implementation
+- Internal state variables
+- Private component structure
 
 The goal is to test the behavior exposed by the public API.
 
@@ -502,12 +490,12 @@ The Compound Components implementation should consider accessibility from the be
 
 For the Tabs example, this includes:
 
-* Appropriate semantic roles
-* Keyboard interaction
-* Focus management
-* Active state communication
-* Accessible relationships between triggers and panels
-* Appropriate ARIA attributes where necessary
+- Appropriate semantic roles
+- Keyboard interaction
+- Focus management
+- Active state communication
+- Accessible relationships between triggers and panels
+- Appropriate ARIA attributes where necessary
 
 ### Accessibility Testing
 
@@ -519,12 +507,12 @@ Accessibility behavior should be verified through user-facing interactions and, 
 
 Performance considerations include:
 
-* Context propagation
-* Component re-renders
-* State ownership
-* Component boundaries
-* Memoization
-* Subscription granularity
+- Context propagation
+- Component re-renders
+- State ownership
+- Component boundaries
+- Memoization
+- Subscription granularity
 
 A key question is:
 
@@ -598,25 +586,25 @@ The pattern can reduce configuration complexity but introduces additional concep
 
 ## 18. References
 
-*To be added as the implementation and research progress.*
+_To be added as the implementation and research progress._
 
 ---
 
 ## Status
 
-* [x] Problem defined
-* [x] Baseline defined
-* [x] Evolution documented
-* [x] Pattern concept documented
-* [ ] Baseline implemented
-* [ ] Pattern implemented
-* [ ] TypeScript considerations documented
-* [ ] API design finalized
-* [ ] Trade-offs validated
-* [ ] Alternatives compared
-* [ ] Tests implemented
-* [ ] Accessibility reviewed
-* [ ] Performance reviewed
-* [ ] Failure modes validated
-* [ ] Final review completed
-* [ ] Deep dive complete
+- [x] Problem defined
+- [x] Baseline defined
+- [x] Evolution documented
+- [x] Pattern concept documented
+- [ ] Baseline implemented
+- [ ] Pattern implemented
+- [ ] TypeScript considerations documented
+- [ ] API design finalized
+- [ ] Trade-offs validated
+- [ ] Alternatives compared
+- [ ] Tests implemented
+- [ ] Accessibility reviewed
+- [ ] Performance reviewed
+- [ ] Failure modes validated
+- [ ] Final review completed
+- [ ] Deep dive complete
